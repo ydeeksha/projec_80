@@ -1,0 +1,87 @@
+<html>
+<head>
+    make paragraphs form using join furction
+</head>
+<body>
+	<center>
+		<div>
+		<h4>
+			<span>1. </span>
+			<input type="text" id="div1_input_box_1" placeholder="Input box 1">
+			
+			<span>2. </span>
+			<input type="text" id="div1_input_box_2" placeholder="Input box 2">
+		
+			<span>3. </span>
+			<input type="text" id="div1_input_box_3" placeholder="Input box 3">
+			
+			<span>4. </span>
+			<input type="text" id="div1_input_box_4" placeholder="Input box 4">
+		
+			<span>5. </span>
+			<input type="text" id="div1_input_box_5" placeholder="Input box 5">
+		
+			<span>6. </span>
+			<input type="text" id="div1_input_box_6" placeholder="Input box 6">
+		</h4>
+		<button onclick="getParagraph1()">Get paragraph 1</button>
+		</div>
+
+		<div>
+		<h4>
+			<span>1. </span>
+			<input type="text" id="div2_input_box_1" placeholder="Input box 1">
+			
+			<span>2. </span>
+			<input type="text" id="div2_input_box_2" placeholder="Input box 2">
+			
+			<span>3. </span>
+			<input type="text" id="div2_input_box_3" placeholder="Input box 3">
+			
+			<span>4. </span>
+			<input type="text" id="div2_input_box_4" placeholder="Input box 4">
+			
+			<span>5. </span>
+			<input type="text" id="div2_input_box_5" placeholder="Input box 5">
+			
+			<span>6. </span>
+			<input type="text" id="div2_input_box_6" placeholder="Input box 6">
+		</h4>
+		<button onclick="getParagraph2()">Get paragraph 2</button>
+		</div>
+
+	</center>
+	<center>
+		<div id="showParagraph1">
+
+        </div>
+		<div id="showParagraph2">
+            
+        </div>
+	</center>
+
+</body>
+</html>
+<script>
+	function getParagraph1()
+	{
+		var inputs = [];
+		for(var i = 1 ; i <=6 ; i++)
+		{
+			inputs.push(document.getElementById("div1_input_box_" + i).value);
+		}
+	document.getElementById("showParagraph1").innerHTML = inputs.join(". ");
+	}
+
+	function getParagraph2()
+	{
+		var inputs = [];
+		for(var i = 1 ; i <=6 ; i++)
+		{
+			inputs.push(document.getElementById("div2_input_box_" + i).value);
+		}
+	document.getElementById("showParagraph2").innerHTML = inputs.join(". ");
+	}
+
+</script>
+
